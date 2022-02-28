@@ -1,0 +1,120 @@
+{% extends 'iblog/base.html' %}
+{% block css %}  {% endblock %}
+
+{% block body %} 
+{%if msg %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Posted </strong>{{msg}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{%endif%} 
+
+<main>
+  {% if not user.is_authenticated %}
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+        <!-- <img src="https://newevolutiondesigns.com/images/freebies/black-facebook-cover-preview-28.jpg" alt=""> -->
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h3>Bring REVOLUTION.</h3>
+            <p> <strong> Everything on your one Click!! </strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <!-- <h1>Another example headline.</h1> -->
+            <p class="mt-2" ><h3>Thank You for joining iCoder.</h3></p>
+            <p><a class="btn btn-lg btn-primary" href="about">Learn more about us</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item text-corner">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+        
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <!-- <h1>Sign up Today</h1> -->
+            <p><h3> Sign Up Today </h3> </p>
+            <p><a class="btn btn-lg btn-primary" href="register">Click Here</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+{% endif %}
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+   
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">iblog- Write Your Blogs. <span class="text-muted">Your opinion matters the most!!</span></h2>
+        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+      </div>
+      <div class="col-md-5">
+        <img src="https://th.bing.com/th/id/OIP.a5YOm_1N-oe-O025Jw4PTQHaE8?pid=ImgDet&rs=1" alt="">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Millions of user with their absorbing ideas. <span class="text-muted">Be one of them!!!</span></h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="https://th.bing.com/th/id/OIP.COE2zHyTV-ThFqR9ZlxMbgHaFc?pid=ImgDet&rs=1" alt="">
+
+      </div>
+    </div>
+
+    
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>© 2017–2021 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+  </footer>
+</main>
+
+
+</div>
+{% endblock %}
+

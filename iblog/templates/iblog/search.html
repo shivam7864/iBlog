@@ -1,0 +1,46 @@
+{% extends 'iblog/base.html' %}
+
+<!-- {% block title %} Search Results {% endblock title %}
+{% block blogactive %} active {% endblock blogactive %}  -->
+
+
+{% block body %}
+
+
+<div class="container my-3">
+    <h2>Search results : </h2>
+    {% if msg %}
+   <p>No search results</p>
+    Your search query : <b>{{query}}</b> did not match any documents. <br>
+    Suggestions:
+    <ul>
+    <li>Make sure that all words are spelled correctly.</li>
+    <li>Try more general keywords.</li>
+   <li> Try fewer keywords.</li>
+   <li> Try different keywords.</li>
+    </li>
+    </ul>
+{% endif %}
+    
+    {% for post in allPosts%}
+
+
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://th.bing.com/th/id/OIP.COE2zHyTV-ThFqR9ZlxMbgHaFc?pid=ImgDet&rs=1" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title{">{{post.title}}</h5>
+              <p class="card-text">{{post.description}}</p>
+              <p class="card-text"><small class="text-muted">by {{post.author}} at {{post.timeStamp}}</small></p>
+              <a href="{%url 'blogpost' post.id%}" class="btn btn-primary">Full Article</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+
+ {% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'iblog/base.html' %}
+{%block body%}
+<div class="card mb-3 mx-auto mt-5" style="max-width: 540px; font-size: 25px; ">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="https://th.bing.com/th/id/OIP.COE2zHyTV-ThFqR9ZlxMbgHaFc?pid=ImgDet&rs=1s" class="img-fluid rounded-start mt-3" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          
+          <p class="card-text">Username:{{details.username}}</p>
+          <p class="card-text">Email:{{details.email}}</p>
+          <p class="card-text">Password: ******</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+{%endblock%}

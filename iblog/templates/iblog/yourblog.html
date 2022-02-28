@@ -1,0 +1,110 @@
+{% extends 'iblog/base.html' %}
+{%block body%}
+<h1 style="text-align: center;" class="my-2">Welcome {{user}}</h1>
+<div class="container">
+<h3>Articles on Tech</h3>
+</div>
+<div class="container my-3">
+    <div class="row">
+{% for blog in tech%}
+<div class="card mb-3 mx-1" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="https://th.bing.com/th/id/OIP.COE2zHyTV-ThFqR9ZlxMbgHaFc?pid=ImgDet&rs=1" class="img-fluid rounded-start mt-3" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{blog.title}}</h5>
+          <p class="card-text">{{blog.description}}</p>
+          <p class="card-text"><small class="text-muted">by {{blog.author}} at {{blog.timeStamp}}</small></p>
+          <a href="{%url 'blogpost' blog.id%}" class="btn btn-primary">Full Article</a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+{%endfor%}
+</div>
+</div>
+
+<div class="container">
+<h3>Articles on Politics</h3>
+</div>
+<div class="container my-3">
+  <div class="row">
+{% for blog in politics%}
+<div class="card mb-3 mx-1" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="https://th.bing.com/th/id/OIP.COE2zHyTV-ThFqR9ZlxMbgHaFc?pid=ImgDet&rs=1" class="img-fluid rounded-start mt-3" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{blog.title}}</h5>
+        <p class="card-text">{{blog.description}}</p>
+        <p class="card-text"><small class="text-muted">by {{blog.author}} at {{blog.timeStamp}}</small></p>
+        <a href="{%url 'blogpost' blog.id%}" class="btn btn-primary">Full Article</a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+{%endfor%}
+</div>
+</div>
+<div class="container">
+<h3>Articles on Sports</h3>
+</div>
+<div class="container my-3">
+  <div class="row">
+{% for blog in sports%}
+<div class="card mb-3 mx-1" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="https://th.bing.com/th/id/OIP.COE2zHyTV-ThFqR9ZlxMbgHaFc?pid=ImgDet&rs=1" class="img-fluid rounded-start mt-3" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{blog.title}}</h5>
+        <p class="card-text">{{blog.description}}</p>
+        <p class="card-text"><small class="text-muted">by {{blog.author}} at {{blog.timeStamp}}</small></p>
+        <a href="{%url 'blogpost' blog.id%}" class="btn btn-primary">Full Article</a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+{%endfor%}
+</div>
+</div>
+<div class="container">
+<h3>Articles on Others</h3>
+</div>
+
+<div class="container my-3">
+  <div class="row">
+{% for blog in others%}
+<div class="card mb-3 mx-1" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="https://th.bing.com/th/id/OIP.COE2zHyTV-ThFqR9ZlxMbgHaFc?pid=ImgDet&rs=1" class="img-fluid rounded-start mt-3" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{blog.title}}</h5>
+        <p class="card-text">{{blog.description}}</p>
+        <p class="card-text"><small class="text-muted">by {{blog.author}} at {{blog.timeStamp}}</small></p>
+        <a href="{%url 'blogpost' blog.id%}" class="btn btn-primary">Full Article</a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+{%endfor%}
+</div>
+</div>
+{%endblock%}

@@ -1,0 +1,30 @@
+{% extends 'iblog/base.html' %}
+{%block body%}
+{%if msg %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Posted </strong>{{msg}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{%endif%}
+<div class="container mt-3">
+<form action="" method="post">{% csrf_token %}
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Title</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" name="title">
+    </div>
+    <label for="exampleFormControlInput1" class="form-label">Tags</label>
+    <select class="form-select" aria-label="Default select example" name="tag">
+        <option>Others</option>
+        <option>Tech</option>
+        <option>Politics</option>
+        <option>Sports</option>
+      </select>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Blog</button>
+</form>
+</div>
+
+{%endblock%}
